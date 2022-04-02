@@ -29,7 +29,7 @@ This tool might be useful for a user who is working on a laptop or a desktop com
 
 ![SWOT-Sample](https://github.com/snehal0203/M1_MatrixCalculator/blob/main/1_Requirements/SWOT.jpg)
 
-# 4W&#39;s and 1&#39;H
+# 4 W's and 1 H
 
 ## Who:
  * Students who need to answer issues with matrices as part of their academic work.
