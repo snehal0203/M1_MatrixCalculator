@@ -1,23 +1,29 @@
-PROJECT_NAME = Sortingalgo
+# used for comments
 
-SRC = src/BubbleSort.c\
-src/InsertionSort.c\
-src/QuickSort.c\
-src/MergeSort.c
+#make file syntax
+#TARGET-NAME: dependencies
+#<TAB SPACE>command
 
-GCNO = BubbleSort\
-InsertionSort\
-QuickSort\
-MergeSort
+#all.exe:division.c substraction.c multiplication.c addition.c main.c
+#	gcc test.c division.c substraction.c multiplication.c addition.c -o all.exe
+#clean: 
+#	del /q *.exe   
+  
+PROJ_NAME = E_Book_On_C
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-BUILD = build
+BUILD_DIR = Build
 
-#INC=inc
-UNI=unity/unity.c
+TEST_SRC = test/test.c\
+unity/unity.c\
+inc/myHeader.h
 
-INC	= -Iunity\
--Itest\
+INC = -Iinc\
+-Iunity\
+-Isrc
 
+DOCUMENTATION_OUTPUT = documentation/html
+#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 ifdef OS
    RM = del /q
    FixPath = $(subst /,\,$1)
@@ -30,40 +36,30 @@ else
    endif
 endif
 
-TEST_SRC = test/test_sorting
+# Makefile will not run target command if the name with file already exists. To override, use .PHONY
+.PHONY : all test coverage run clean doc
 
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+all:$(BUILD_DIR)
+	gcc e_book.c $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-.PHONY: run clean test doc 
+test: $(SRC) $(TEST_SRC)
+	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
+coverage: ${PROJECT_NAME}
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(SRC)
 
-$(PROJECT_NAME).exe : $(SRC)
-	gcc -I inc $(INC) $(PROJECT_NAME).c $(SRC) main.c -o $(PROJECT_NAME).exe
+doc:
+	make -C doc $(BUILD_DIR):
+	mkdir $(BUILD_DIR)
 
-run: $(PROJECT_NAME).exe
-	$(PROJECT_NAME).exe
-
-test:$(TEST)
-	gcc -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c -o test\Main.exe
-	./test\Main.exe
-
-coverage:
-	gcc -fprofile-arcs -ftest-coverage -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c $(PROJECT_NAME).c -o all.out
-	./all.out
-	gcov $(GCNO).gcno
-
-#cat *.c.gcov
 
 clean:
-	del *gcda *gcov *gcno 
-
-$(BUILD):
-	mkdir build
-
-all: $(SRC) $(BUILD)
-	gcc -I inc $(UNI) $(SRC) $(INC) $(TEST_SRC).c -o $(PROJECT_OUTPUT)
-
-run1:
-	./$(PROJECT_OUTPUT)
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	make clean -C doc
+	rmdir $(BUILD_DIR) doc/htm

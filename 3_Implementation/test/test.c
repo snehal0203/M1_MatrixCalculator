@@ -1,68 +1,42 @@
-#include "unity.h"
+#include <stdio.h>
+#include "../inc/myHeader.h"
+#include "../unity/unity.h"
 
-#include "prototypes.h"
-#define PROJECT_NAME    "Sortingalgo"
-
-// Prototypes for all the test functions 
-
-void test_BubbleSort(void);
-void test_InsertionSort(void);
-void test_QuickSort(void);
-void test_MergeSort(void);
-
-
-// Required by the unity test framework */
-void setUp(){}
-void tearDown(){}
-
-// Start of the application test 
-int main()
+/* Required by the unity test framework */
+void setUp()
 {
-// Initiate the Unity Test Framework 
-  UNITY_BEGIN();
-
-// Run Test functions 
-  RUN_TEST(test_BubbleSort);
-  RUN_TEST(test_InsertionSort);
-  RUN_TEST(test_QuickSort);
-  RUN_TEST(test_MergeSort);
-  
-  // Close the Unity Test Framework 
-  return UNITY_END();
+}
+/* Required by the unity test framework */
+void tearDown()
+{
 }
 
-// Write all the test functions  
-void test_BubbleSort(void) {
- int expected[]={10, 12, 13};
-   int list[]={10, 13, 12};
-   int* actual=BubbleSort(list,3);
-   TEST_ASSERT_EQUAL_INT_ARRAY(expected,actual,3);
-  
-  
+void test_zero(void)
+{
+    
+    TEST_ASSERT_EQUAL(0, my_test(0,0));
+    TEST_ASSERT_EQUAL(0, my_test(1,-1));
+    //TEST_ASSERT_EQUAL(0, Index());
+}
+void test_1(void){
+    TEST_ASSERT_EQUAL(3, my_test(2,1));
+    TEST_ASSERT_EQUAL(9, my_test(4,5));
+}
+void test_2(void){
+    TEST_ASSERT_EQUAL(-1, my_test(3,-4));
+    TEST_ASSERT_EQUAL(-2, my_test(3,-5));
 }
 
-void test_InsertionSort(void) {
-   int expected[]={10, 12, 13};
-   int list[]={10, 13, 12};
-   int* actual=InsertionSort(list,3);
-   TEST_ASSERT_EQUAL_INT_ARRAY(expected,actual,3);
-  
-  
+int main(void)
+{
+    /* Initiate the Unity Test Framework */
+    UNITY_BEGIN();
+
+    /* Run Test functions */
+    RUN_TEST(test_zero);
+    RUN_TEST(test_1);
+    RUN_TEST(test_2);
+
+    /* Close the Unity Test Framework */
+    return UNITY_END();
 }
-
-void test_QuickSort(void) {
-   int expected[]={10, 12, 13};
-   int list[]={10, 13, 12};
-   int* actual=QuickSort(list,0,2);
-   TEST_ASSERT_EQUAL_INT_ARRAY(expected,actual,3);
-}
-
-void test_MergeSort(void) {
-   int expected[]={10, 12, 13};
-   int list[]={10, 13, 12};
-   int* actual=MergeSort(list,0,2);
-   TEST_ASSERT_EQUAL_INT_ARRAY(expected,actual,3);
-}
-
-
-

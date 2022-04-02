@@ -1,16 +1,18 @@
 # Design
-## ![Tip](https://img.shields.io/badge/Tip-Please%20Turn%20On%20Light%20Mode%20for%20better%20viewing-green)
+
 ## High Level Design 
-### Architecture Design :
-![Architecture](https://github.com/260230/Mini-Project/blob/main/2_Design/High%20level%20Architecture%20design.png)
-### Insertion Sort Diagram :
-![InsertionDiagram](https://github.com/260230/Mini-Project/blob/main/2_Design/insertion%20sort.png)
+-----------------------------------------------------------
+### Structural and Behavioural Diagram
+#### Usecase behavioural diagram
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/2_Design/Usecase%20Behaviour%20diagram.png" width="1080" height="720">
 
-### Bubble Sort Diagram :
-![BubbleSortDiagram](https://github.com/260230/Mini-Project/blob/main/2_Design/Bubble%20sort.png)
+#### Activity behavioural diagram
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/2_Design/Activity%20behaviour.png" width="1080" height="720">
 
-### Quick Sort Diagram :
-![QuickSortDiagram](https://github.com/260230/Mini-Project/blob/main/2_Design/quick%20sort.png)
+# ------------------------------------------------------------------------
 
-### Merge Sort Diagram :
-![MergeSortDiagram](https://github.com/260230/Mini-Project/blob/main/2_Design/merge%20sort.png)
+## Low Level Design 
+-----------------------------------------
+### Structural and Behavioural Diagram
+#### Component structure Diagram
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/2_Design/Component%20Structure%20Diagram.png" width="1080" height="720">

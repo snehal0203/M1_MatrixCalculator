@@ -1,20 +1,32 @@
 # TEST PLAN:
 
-## Table 1: High Level Test Plan
+## Table no: High level test plan
 
-| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual O/P** |**Type Of Test**  |    
+| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-| H_001 | Check if code is taking input or not | All integers | Integers | PASS | Requirement based |
-| H_002 | Check if array is created or not | Of given size n | N sized integers | PASS | Requirement based |
-| H_003 | Check if array is not having null value | Not null values | Success | PASS | Requirement based |
-| H_004 | Check if sorted array is displayed properly | Of given size n | N sized integers | PASS | Requirement based |
+|  H_01       | Is user able to get into the coverpage of their desired choices | 0 | cover page | coverpage | Requirement based |
+|  H_02       | Is the user able to get into the index page | 1 | index page contents | index page contents | Requirement based |
+|  H_03       | Is the user able to run the given sample codes | y | expected output | expected output | Scenario Based |
+|  H_04       | Is the user able to submit his feedback | user review | review | review | Scenario Based |      
 
+## Table no: Low level test plan
 
+| **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
+|-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
+|  L_01       | is the user able to get into the contents | 1-9 | respective topic | respective topic|Requirement based |
 
+## Screen shots
+---------------------
 
-## Table 2: Low Level Test Plan
+### unit testing output
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/test%20output.png" width="1020" height="620">
 
-| **Test ID** | **HLT ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
-|-------------|-----|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_001  |H_001,H_002|Check if values inputted must be in specific array size n| All integers| SUCCESS | SUCCESS | Technical |
-|  L_002  |H_001,H_002,H_003,H_004|Check if array is properly sorting during program execution| Integers | SUCCESS | SUCCESS | Technical |
+----------------------------------
+
+### example code which the user can run and test by their own.
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/demo%20code.png" width="1020" height="620">
+
+----------------------------------
+
+### index page. from here the user can go to different topics.
+<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/index.png" width="1020" height="620">
