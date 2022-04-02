@@ -1,73 +1,49 @@
 # Requirements
 ## Introduction
-  * We use mathematical procedures on a daily basis. Every day, we will be surrounded by many forms of computations. Matrices are mathematical structures in which integers are organised in columns and rows. In actual life, matrices are used in a variety of applications. The software industry's main use is the creation of algorithms such as path finding algorithms, image processing algorithms, and so on.
-  * Some basic matrix operations are covered in this project, and the user may choose which operation to conduct on the matrix. The matrices and their sizes are then input. It's worth noting that the project only considers square matrices.
+ Sorting techniques have a wide variety of applications. Computer-Aided Engineering systems often use sorting algorithms to help reason about geometric objects, process numerical data, rearrange lists, etc. In general, therefore, we will be interested in sorting a set of records containing keys, so that the keys are ordered according to some well defined ordering rule, such as numerical or alphabetical order. Often, the keys will form only a small part of the record. In such cases, it will usually be more efficient to sort a list of keys without physically rearranging the records.
 
-## Research
+## Objective of the Project
+This deals with the presentation of information or data in an appreciable form and also to minimize the time used in searching for items. However, it can be seen that a well-sorted or organized file enhances easy searching of data while an unsorted one will pose little or great problems to locate a given item in a large list. However, the comparison process will be based on the following:
+(i) Memory space used by methods
+(ii) Different techniques used for sorting
+(iii) Number of comparison made during sorting process
+(iv) Coding based on the sorting algorithm
 
-### Objective
-Matrix operations on square matrices are the subject of this study. Addition, subtraction, and multiplication are the operations that are done on two square matrices. Transpose, determinant, and inverse are the operations that may be applied to a single square matrix.
-
-### Benefits
-
-This tool might be useful for a user who is working on a laptop or a desktop computer and has to do matrix-based computations. A person can determine the output values of a matrix of up to 3 X 3 dimensions, or 3 rows and 3 columns. When they try to solve the matrix for dimensions greater than three, the time spent is considerable, and verifying whether the result is valid or not takes much longer. As a result, you may use this tool to double-check your matrix operations.
-
-
-## Cost and Features
-
- * The cost of performing a matrix computations project is little to none. However, research and development will be done to extend matrix applications to other state-of-the-art sectors such as machine learning, image processing, encryption, path finding techniques, and so on. This application is also useful for doing matrices-related calculations.
- 
- ### Some of The features of the project
-
- * For allocating memory for the matrices, i.e. 2 dimensional arrays, this software uses dynamic memory allocation. For storing the input matrices, a structure is implemented. By selecting a number on the keyboard, the user can pick the operation to be done. During the program's execution, the meaning of each number, i.e. the action it performs, will be displayed on the screen.
+## Signification of the Project
+Sorting algorithm was designed to enable the people and the society to be acquainted with the arrangement of data and items. Above topic will let us know the organization of data in the memory location and also make proper use and utilization of the computer time.
 
 
-## Defining Our System
-* The system is considered as a blackbox that only accepts a single number as input. The number is then mapped in order to conduct the proper function. The user will next be asked to specify the matrix size. The user is next asked to enter the matrix elements. The data is saved in two-dimensional arrays that are dynamically created and provided to the appropriate routines. The result is then shown on the screen. This procedure will continue until the user pushes a key to exit the software.
+## Benefits of Sorting Techniques
+The advantage of an algorithm is that it can provide a method to follow when attempting to solve a real problem.
+The other common form of problem-solving is "trial and error", which is often much more inefficient than
+1. studying the problem,
+2. looking for an algorithm that can solve that problem,
+3. then use the algorithm to build a concrete solution.
+
+## Performance Criteria
+There are several criteria to be used in evaluating a sorting algorithm:
+. Running time: - Typically, an elementary sorting algorithm requires O(N2) steps to sort N randomly arranged items.  More sophisticated sorting algorithms require O(N log N) steps on average. Algorithms differ in the constant that appears in front of the N2 or N log N.  Furthermore, some sorting algorithms are more sensitive to the nature of the input than others.  Quicksort, for example, requires O(N log N) time in the average case, but requires O(N2) time in the worst case.
+. Memory requirements: - The amount of extra memory required by a sorting algorithm is also an important consideration.  In place sorting algorithms are the most memory efficient, since they require practically no additional memory.  Linked list representations require an additional N words of memory for a list of pointers. Still other algorithms require sufficient memory for another copy of the input array. These are the most inefficient in terms of memory usage.
+. Stability: - This is the ability of a sorting algorithm to preserve the relative order of equal keys in a file.
 
 ## SWOT ANALYSIS
+![SWOT Analysis](https://github.com/260230/Mini-Project/blob/main/1_Requirements/SWOT.png)
 
-![SWOT-Sample](https://github.com/snehal0203/M1_MatrixCalculator/blob/main/1_Requirements/SWOT.jpg)
-
-# 4 W's and 1 H
-
-## Who:
- * Students who need to answer issues with matrices as part of their academic work.
- * Workers in the datascience field work on machine learning and deep learning applications that heavily rely on matrices.
- * Software engineers
- * Researchers and mathematicians
-
-## What:
- * Calculate the determinant, transpose, and inverse of a single matrix, as well as the sum, differemce, and product of two matrices.
-
-
-## When:
- * Students who are having trouble solving a matrix-related problem might use this application to align their results.
- * It may be used by researchers to achieve a rapid computation result.
- * When computing for matrices of large order, this feature comes in handy.
-
-## Where:
- * Students, employees and researchers all over the world.
-
-## How:
- * This program may run on either a Linux or Windows PC.
-
+# Detail requirements
 ## High Level Requirements: 
 | ID | Description | Category | Status | 
 | ----- | ----- | ------- | ---------|
-| H01 | The user will be able to define the matrix's size. |Technical| IMPLEMENTED |
-| H02 | The user should be able to combine the matrices. | Techincal | IMPLEMENTED | 
-| H03 | The user must be able to subtract matrices. | Techincal |  IMPLEMENTED  |
-| H04 | The user must be able to multiply matrices. | Techincal |  IMPLEMENTED  |
-| H05 | A user must be able to find a matrix's determinant, transpose, and inverse. | Techincal |  IMPLEMENTED  |
+| H_SA01 | User should be able to give input of their choice | Techincal | IMPLEMENTED | 
+| H_SA02 | User should be able to input array of their choice | Techincal |  IMPLEMENTED  |
+| H_SA03 | User should be able to perform bubble sort | Techincal |  IMPLEMENTED  |
+| H_SA04 | User should be able to perform insertion sort | Techincal |  IMPLEMENTED  |
+| H_SA05 | User should be able to perform quick sort | Techincal |  IMPLEMENTED  |
+| H_SA06 | User should be able to perform merge sort | Techincal |  IMPLEMENTED  |
 ##  Low level Requirements:
  
 | ID | Description | HLR ID | Status (Implemented/Future) |
 | ------ | --------- | ------ | ----- |
-| L01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | H01 |  IMPLEMENTED  |
-| L02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | H02 |  IMPLEMENTED |
-| L03 | Subtraction of two matrices is done in the same way that addition is done.| H03 | IMPLEMENTED |
-| L04 | Two square matrices of a specific size are used to multiply two matrices. | H04 |  IMPLEMENTED  |
-| L05 | The determinant of a single matrix of a specified size is implemented. | H05 |  IMPLEMENTED  |
-| L06 | The transpose of a single matrix operation is implemented | H05 |  IMPLEMENTED  |
-| L07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | H05 |  IMPLEMENTED  |
+| L_SA01 | User should be able to give array input for the bubble sort technique | H_SA02,H_SA03 |  IMPLEMENTED  |
+| L_SA02 | User should be able to give array input for the insertion sort technique | H_SA02,H_SA04 |  IMPLEMENTED  |
+| L_SA03 | User should be able to give array input for the quick sort technique | H_SA02,H_SA05 |  IMPLEMENTED  |
+| L_SA04 | User should be able to give array input for the merge sort technique | H_SA02,H_SA06 |  IMPLEMENTED  |

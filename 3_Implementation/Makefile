@@ -1,58 +1,69 @@
-# Name of the project
-PROJECT_NAME = Matrix_Calculator
+PROJECT_NAME = Sortingalgo
 
-#Doxyfile folder
-DOC = doc
+SRC = src/BubbleSort.c\
+src/InsertionSort.c\
+src/QuickSort.c\
+src/MergeSort.c
 
-# All source code files
-SRC = project_main.c\
-src/matrix_operations.c
+GCNO = BubbleSort\
+InsertionSort\
+QuickSort\
+MergeSort
 
-# All test source files
-TEST_SRC = src/matrix_operations.c\
-test/test_matrix_operations.c\
-unity/unity.c\
+BUILD = build
 
-TEST_OUTPUT = Test_$(PROJECT_NAME).out
+#INC=inc
+UNI=unity/unity.c
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+INC	= -Iunity\
+-Itest\
+
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
+
+TEST_SRC = test/test_sorting
+
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
+.PHONY: run clean test doc 
 
 
-# Project Output name
-PROJECT_OUTPUT = $(PROJECT_NAME).out
+$(PROJECT_NAME).exe : $(SRC)
+	gcc -I inc $(INC) $(PROJECT_NAME).c $(SRC) main.c -o $(PROJECT_NAME).exe
 
-# Document files
-DOCUMENTATION_OUTPUT = doc/html
+run: $(PROJECT_NAME).exe
+	$(PROJECT_NAME).exe
 
-# Default target built
-$(PROJECT_NAME):all
+test:$(TEST)
+	gcc -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c -o test\Main.exe
+	./test\Main.exe
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
+coverage:
+	gcc -fprofile-arcs -ftest-coverage -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c $(PROJECT_NAME).c -o all.out
+	./all.out
+	gcov $(GCNO).gcno
+
+#cat *.c.gcov
+
+clean:
+	del *gcda *gcov *gcno 
+
+$(BUILD):
+	mkdir build
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
+	gcc -I inc $(UNI) $(SRC) $(INC) $(TEST_SRC).c -o $(PROJECT_OUTPUT)
 
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
+run1:
 	./$(PROJECT_OUTPUT)
-
-#Documentation using doxygen
-doc: $(DOC)
-	make -C $(DOC) doc
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-#Coverage
-coverageCheck: 
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
-clean:
-	rm -rf $(PROJECT_OUTPUT) $(TEST_OUTPUT) $(DOCUMENTATION_OUTPUT)
-

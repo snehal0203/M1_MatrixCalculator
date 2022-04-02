@@ -1,23 +1,20 @@
 # TEST PLAN:
 
-## Table no: High level test plan
+## Table 1: High Level Test Plan
 
-| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
+| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual O/P** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  H_01       |tested addition of two matrices|  matrix1, matrix2, n| SUCCESS|SUCCESS|Technical |
-|  H_02       |tested subtraction of two matrices|  matrix1, matrix2, n|SUCCESS|SUCCESS|Technical   |
-|  H_03       |tested multiplication of two matrices|  matrix1, matrix2, n|SUCCESS|SUCCESS|Technical |
-|  H_04       |tested determinant of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
-|  H_05       |tested transpose of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
-|  H_06       |tested inverse of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
-|  H_07       |tested power of -1 function| 3|-1|-1|Technical |
-|  H_08       |tested power of -1 function| 2|1|1|Technical |
+| H_001 | Check if code is taking input or not | All integers | Integers | PASS | Requirement based |
+| H_002 | Check if array is created or not | Of given size n | N sized integers | PASS | Requirement based |
+| H_003 | Check if array is not having null value | Not null values | Success | PASS | Requirement based |
+| H_004 | Check if sorted array is displayed properly | Of given size n | N sized integers | PASS | Requirement based |
 
 
-## Table no: Low level test plan
 
-| **Test ID** | **HLT ID** |**Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
-|-------------|------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       | H_01, H_02, H_03|Tested on functions which accept two matrices as input|  matrix1, matrix2, n |SUCCESS|SUCCESS |Technical |
-|  L_02       | H_04, H_05, H_06|Tested on functions which accept single matrix as input|  matrix1, n |SUCCESS|SUCCESS |Technical |
-|  L_03       | H_07, H_08 |Tested on function which returns an integer value|  3  |-1|-1|Technical |
+
+## Table 2: Low Level Test Plan
+
+| **Test ID** | **HLT ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
+|-------------|-----|--------------------------------------------------------------|------------|-------------|----------------|------------------|
+|  L_001  |H_001,H_002|Check if values inputted must be in specific array size n| All integers| SUCCESS | SUCCESS | Technical |
+|  L_002  |H_001,H_002,H_003,H_004|Check if array is properly sorting during program execution| Integers | SUCCESS | SUCCESS | Technical |
