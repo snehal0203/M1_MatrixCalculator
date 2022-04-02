@@ -27,7 +27,7 @@ This tool might be useful for a user who is working on a laptop or a desktop com
 
 ## SWOT ANALYSIS
 
-![SWOT-Sample](https://github.com/hemanthasapu/256889-miniproject-ltts/blob/main/1_Requirements/SWOT.png)
+![SWOT-Sample](https://github.com/snehal0203/M1_MatrixCalculator/blob/main/1_Requirements/SWOT.jpg)
 
 # 4W&#39;s and 1&#39;H
 
