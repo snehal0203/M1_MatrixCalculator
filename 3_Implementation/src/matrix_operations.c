@@ -1,11 +1,32 @@
+/**
+ * @file matrix_operations.c
+ * @author Hemanth A(hemanth.ec17@bmsce.ac.in)
+ * @brief  This is the source code which contains all the functions for the project
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "matrix_operations.h"
 
+
+/**
+ * @brief This function frees the dynamically allocated memory in the structure
+ * 
+ * @param m 
+ */
 void free_matrix_structure(mat *m){
     free(m->matrix_1);
     free(m->matrix_2);
 }
 
-
+/**
+ * @brief A function to dynamically allocate the memory for the matrix
+ * 
+ * @param matrix 
+ * @param n 
+ */
 void dynamic_alloc_mat(float **matrix,int n){
     matrix = (float **)calloc(n,sizeof(float));
     for(int i=0;i<n;i++){
@@ -13,6 +34,15 @@ void dynamic_alloc_mat(float **matrix,int n){
     }
 }
 
+
+
+/**
+ * @brief A function to allocate memory and input the matrix elements
+ * 
+ * @param matrix 
+ * @param n 
+ * @return float** 
+ */
 float ** alloc_input_matrix(float **matrix,int n){
     int i,j;
     matrix = (float **)calloc(n,sizeof(float));
@@ -31,6 +61,13 @@ float ** alloc_input_matrix(float **matrix,int n){
     return matrix;
 }
 
+/**
+ * @brief A function to output the matrix
+ * 
+ * @param matrix 
+ * @param n 
+ */
+
 void output_matrix(float **matrix,int n){
     int i,j;
     float x;
@@ -44,6 +81,15 @@ void output_matrix(float **matrix,int n){
     printf("\n\n\n");
 }
 
+
+/**
+ * @brief A function to add two matrices
+ * 
+ * @param matrix1 
+ * @param matrix2 
+ * @param n 
+ * @return error_t 
+ */
 error_t add_matrices(float **matrix1,float **matrix2, int n){
     int i,j;
     float **result;
@@ -65,6 +111,14 @@ error_t add_matrices(float **matrix1,float **matrix2, int n){
 
 }
 
+/**
+ * @brief A function to subtract 2 matrices
+ * 
+ * @param matrix1 
+ * @param matrix2 
+ * @param n 
+ * @return error_t 
+ */
 error_t subtract_matrices(float **matrix1,float **matrix2, int n){
     int i,j;
     float **result;
@@ -83,6 +137,14 @@ error_t subtract_matrices(float **matrix1,float **matrix2, int n){
     return SUCCESS;
 }
 
+/**
+ * @brief A function to find the product of 2 matrices
+ * 
+ * @param matrix1 
+ * @param matrix2 
+ * @param n 
+ * @return error_t 
+ */
 error_t product_matrices(float **matrix1,float **matrix2, int n){
     int i,j,k;
     float **result;
@@ -105,6 +167,13 @@ error_t product_matrices(float **matrix1,float **matrix2, int n){
     return SUCCESS;
 }
 
+/**
+ * @brief A function to find the determinant of a matrix
+ * 
+ * @param matrix 
+ * @param k 
+ * @return float 
+ */
 float determinant(float **matrix,int k)
 {
 
@@ -152,6 +221,13 @@ float determinant(float **matrix,int k)
     
 }
 
+/**
+ * @brief A function to find the inverse of a matrix
+ * 
+ * @param num 
+ * @param f 
+ * @return error_t 
+ */
 error_t inverse(float **num, int f)
 {
  float **matb, **fac,**transp, **invers, d;
@@ -222,6 +298,16 @@ error_t inverse(float **num, int f)
   return SUCCESS;
 }
 
+
+
+
+/**
+ * @brief A function to find the transpose of a matrix
+ * 
+ * @param matrix 
+ * @param n 
+ * @return error_t 
+ */
 error_t transpose(float **matrix,int n){
     float **result;
     int i,j;
@@ -244,6 +330,12 @@ error_t transpose(float **matrix,int n){
     
 }
 
+/**
+ * @brief A function to find the power of (-1)
+ * 
+ * @param exp 
+ * @return float 
+ */
 float power(int exp){
     float result=1;
     while(exp != 0){

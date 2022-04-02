@@ -3,32 +3,63 @@
 
 #define PROJECT_NAME    "Matrix Calculator"
 
+/* Prototypes for all the test functions */
+
+/**
+ * @brief Testing function for addition of 2 matrices
+ * 
+ */
 void test_add_mat(void);
 
+/**
+ * @brief Testing function for subtraction of 2 matrices
+ * 
+ */
 void test_sub_mat(void);
 
+/**
+ * @brief Testing function for multiplication of 2 matrices
+ * 
+ */
 void test_mul_mat(void);
 
-
+/**
+ * @brief Testing function for finding determiant of matrix 
+ * 
+ */
 void test_det_mat(void);
 
-
+/**
+ * @brief Testing function for finding inverse of a function
+ * 
+ */
 void test_inv_mat(void);
 
-
+/**
+ * @brief To test the power function of (-1)^exp
+ * 
+ */
 void test_pow(void);
 
+/**
+ * @brief Testing function for transpose of a matrix
+ * 
+ */
 void test_transp_mat(void);
 
-void setUp(){}
 
+/* Required by the unity test framework */
+void setUp(){}
+/* Required by the unity test framework */
 void tearDown(){}
 
+/* Start of the application test */
 int main()
 {
-
+/* Initiate the Unity Test Framework */
   UNITY_BEGIN();
 
+/* Run Test functions */
   RUN_TEST(test_add_mat);
   RUN_TEST(test_sub_mat);
   RUN_TEST(test_mul_mat);
@@ -37,9 +68,12 @@ int main()
   RUN_TEST(test_inv_mat);
   RUN_TEST(test_transp_mat);
 
+
+  /* Close the Unity Test Framework */
   return UNITY_END();
 }
 
+/* Write all the test functions */ 
 void test_add_mat(void) {
 
   float **test_mat1, **test_mat2;
