@@ -1,2 +1,0 @@
-
-Array is a collection of similar datatype.

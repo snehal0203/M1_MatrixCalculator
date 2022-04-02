@@ -1,12 +1,13 @@
-# SDLC Activity Based Learning
+# MATRIX CALCULATOR
+### Miniproject 
 
-Visit [Pages for Report -optional](using github.io option)
+
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
-[![C/C++ CI](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/CodeQuality_Dynamic.yml)| [![Unity - Unit Testing](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/unity.yml/badge.svg)](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/debasish2110/LTTS-C-MiniProject/actions/workflows/gitinspector.yml)
+[![C/C++ CI](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/CodeQuality_Dynamic.yml) | [![Unity - Unit Testing](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/unity.yml/badge.svg)](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/hemanthasapu/256889-miniproject-ltts/actions/workflows/gitinspector.yml)
 
-----
+
 ## Folder Structure
 Folder             | Description
 -------------------| -----------------------------------------
@@ -15,22 +16,23 @@ Folder             | Description
 `3_Implementation` | All code and documentation
 `4_Test_plan`      | Documents with test plans and procedures
 
-## Contributors List and Summary
+## Features  
 
-PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
--------|---------|----------------|----------------|---------------|-------------|--------------
-265057 | Debashish  | User Input, content displaying, suggestion, sample code compilation |  5  |  4  | 3  | 3        
+| Feature Id | Feature |
+| -----------|---------|
+|F_01| Options to select matrix operation|
+|F_02| Operations on two matrices such as addition, subtraction and multiplication are included|
+|F_03| Single matrix operations such as determinant, transpose and inverse of a matrix |
+|F_04| Separate function for each operation |
+|F_05| A structure has been implemented for storing the matrices|
+|F_06| Dynamic memory allocation and deallocation has been implemented for the matrices|
+|F_07|  There is no upper limit for the size of the matrix|
 
 ## Challenges Faced and How Was It Overcome
 
-1. During cpp-check, online resources helped a lot. 
-2. as most of the functions used contains othes function calls in them and required user input so unit test couldnt properly done in most of the functions.
-3. while running the multiple files. Make file helped a lot to resolve this.
-4. over all stack overflow helped a lot in resolving issues during this project.
-
-## Learning Resources
-1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-2. [markdownBasics](https://guides.github.com/features/mastering-markdown/)
-3. [git inspector](https://github.com/ejwa/gitinspector.git)
-4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
-
+| No. | Challenge | Solution
+|-----|-----------|--------
+|1. | Dynamic memory allocation of 2D arrays created segmentation faults. | running the code in GDB helped find the line where the program crashes.
+|2. | Program crashes. | Writing clean code with allocating and deallocating memory at all functions as per requirement. |
+|3. | Logical errors faced while designing matrix operations. | Referred some articles to revise matrix basics and operations on 2D arrays.
+|4. | Unit testing on dynamic 2D array outputs. | Created enumerated variables to be returned by those functions if the specified operation executes successfully.

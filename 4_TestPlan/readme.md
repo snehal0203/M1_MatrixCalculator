@@ -4,29 +4,20 @@
 
 | **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  H_01       | Is user able to get into the coverpage of their desired choices | 0 | cover page | coverpage | Requirement based |
-|  H_02       | Is the user able to get into the index page | 1 | index page contents | index page contents | Requirement based |
-|  H_03       | Is the user able to run the given sample codes | y | expected output | expected output | Scenario Based |
-|  H_04       | Is the user able to submit his feedback | user review | review | review | Scenario Based |      
+|  H_01       |tested addition of two matrices|  matrix1, matrix2, n| SUCCESS|SUCCESS|Technical |
+|  H_02       |tested subtraction of two matrices|  matrix1, matrix2, n|SUCCESS|SUCCESS|Technical   |
+|  H_03       |tested multiplication of two matrices|  matrix1, matrix2, n|SUCCESS|SUCCESS|Technical |
+|  H_04       |tested determinant of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
+|  H_05       |tested transpose of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
+|  H_06       |tested inverse of a matrix|  matrix1, n|SUCCESS|SUCCESS|Technical |
+|  H_07       |tested power of -1 function| 3|-1|-1|Technical |
+|  H_08       |tested power of -1 function| 2|1|1|Technical |
+
 
 ## Table no: Low level test plan
 
-| **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
-|-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       | is the user able to get into the contents | 1-9 | respective topic | respective topic|Requirement based |
-
-## Screen shots
----------------------
-
-### unit testing output
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/test%20output.png" width="1020" height="620">
-
-----------------------------------
-
-### example code which the user can run and test by their own.
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/demo%20code.png" width="1020" height="620">
-
-----------------------------------
-
-### index page. from here the user can go to different topics.
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/4_TestPlan/index.png" width="1020" height="620">
+| **Test ID** | **HLT ID** |**Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
+|-------------|------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
+|  L_01       | H_01, H_02, H_03|Tested on functions which accept two matrices as input|  matrix1, matrix2, n |SUCCESS|SUCCESS |Technical |
+|  L_02       | H_04, H_05, H_06|Tested on functions which accept single matrix as input|  matrix1, n |SUCCESS|SUCCESS |Technical |
+|  L_03       | H_07, H_08 |Tested on function which returns an integer value|  3  |-1|-1|Technical |

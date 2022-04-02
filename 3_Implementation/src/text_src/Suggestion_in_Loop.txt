@@ -1,2 +1,0 @@
-
-loop is functon which simplifies our coding.

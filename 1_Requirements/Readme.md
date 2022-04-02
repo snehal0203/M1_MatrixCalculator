@@ -1,69 +1,73 @@
 # Requirements
 ## Introduction
- * The COVID-19 has resulted in schools shut all across the world. Globally, over 1.2 billion children are out of the classroom. This project aims on providing education to the Technophile newbies. who are interested to learn C language. C language is a computer programming language that was developed to do system programming for the operating system UNIX and is an imperative programming language.
- * This project first takes the user to a index page where the available contents on c program are listed and asks the user to give input for the respective topic he wants to review or study, after that it takes the user to that topic page where there are options to see further subtopics and example codes. User can also try run the example code by him/herself. User can also give suggestion to us. 
+  * We use mathematical procedures on a daily basis. Every day, we will be surrounded by many forms of computations. Matrices are mathematical structures in which integers are organised in columns and rows. In actual life, matrices are used in a variety of applications. The software industry's main use is the creation of algorithms such as path finding algorithms, image processing algorithms, and so on.
+  * Some basic matrix operations are covered in this project, and the user may choose which operation to conduct on the matrix. The matrices and their sizes are then input. It's worth noting that the project only considers square matrices.
 
 ## Research
-### E-BOOK ON C PROGRAMMING...
-* This is a simple project which simply provide easy contents on c programming to the user after taking input from the user. 
-* This project is built using traditional file handling system rather than Data base system. here the user provides his/her desired choice and the code after taking input from the user it runs the respective user defined funtion which prints the contents of the respective topic.
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/1_Requirements/File-functions.jpg" width="920" height="520">
+
+### Objective
+Matrix operations on square matrices are the subject of this study. Addition, subtraction, and multiplication are the operations that are done on two square matrices. Transpose, determinant, and inverse are the operations that may be applied to a single square matrix.
+
+### Benefits
+
+This tool might be useful for a user who is working on a laptop or a desktop computer and has to do matrix-based computations. A person can determine the output values of a matrix of up to 3 X 3 dimensions, or 3 rows and 3 columns. When they try to solve the matrix for dimensions greater than three, the time spent is considerable, and verifying whether the result is valid or not takes much longer. As a result, you may use this tool to double-check your matrix operations.
+
 
 ## Cost and Features
-* This project has various features, like it can provide contents on c programming concepts to the user. 
-* User can also run the given sample codes and try it by themslef. which is a big plus point for this project.
-* users have option also option to give their valuable suggestions in or platform. 
-#### above features are shown in the below screenshot. 
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/1_Requirements/index.png" width="1080" height="720">
+
+ * The cost of performing a matrix computations project is little to none. However, research and development will be done to extend matrix applications to other state-of-the-art sectors such as machine learning, image processing, encryption, path finding techniques, and so on. This application is also useful for doing matrices-related calculations.
+ 
+ ### Some of The features of the project
+
+ * For allocating memory for the matrices, i.e. 2 dimensional arrays, this software uses dynamic memory allocation. For storing the input matrices, a structure is implemented. By selecting a number on the keyboard, the user can pick the operation to be done. During the program's execution, the meaning of each number, i.e. the action it performs, will be displayed on the screen.
+
 
 ## Defining Our System
-* System bacically takes input from the user and checks for the file, and then it prints the file.
-for ruunig the code it checks for the available code and run it in the compiler i.e GCC and prints the output
-* for the suggestion part it takes suggestion from user and stores it in a file.
-<img src="https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/1_Requirements/system%20definition.png" width="780" height="520">
+* The system is considered as a blackbox that only accepts a single number as input. The number is then mapped in order to conduct the proper function. The user will next be asked to specify the matrix size. The user is next asked to enter the matrix elements. The data is saved in two-dimensional arrays that are dynamically created and provided to the appropriate routines. The result is then shown on the screen. This procedure will continue until the user pushes a key to exit the software.
 
 ## SWOT ANALYSIS
-![image](https://github.com/debasish2110/LTTS-C-MiniProject/blob/master/1_Requirements/SWOT%20analysis.png)
 
-# 4W&#39;s and 1&#39;H
+![SWOT-Sample](https://github.com/snehal0203/M1_MatrixCalculator/blob/main/1_Requirements/SWOT.jpg)
+
+# 4 W's and 1 H
 
 ## Who:
-
-* All the tech newbie who wants to step into c programming world.
+ * Students who need to answer issues with matrices as part of their academic work.
+ * Workers in the datascience field work on machine learning and deep learning applications that heavily rely on matrices.
+ * Software engineers
+ * Researchers and mathematicians
 
 ## What:
+ * Calculate the determinant, transpose, and inverse of a single matrix, as well as the sum, differemce, and product of two matrices.
 
-* Digital book or electronic book, that provies information about c programming.
 
 ## When:
-
-* During the ltts step-In training, this is the final project assessment and development started on 6th of april.
+ * Students who are having trouble solving a matrix-related problem might use this application to align their results.
+ * It may be used by researchers to achieve a rapid computation result.
+ * When computing for matrices of large order, this feature comes in handy.
 
 ## Where:
-
-* This can be used in all over the globe. any student/working professional of any age can use it.
+ * Students, employees and researchers all over the world.
 
 ## How:
+ * This program may run on either a Linux or Windows PC.
 
-* users can use this code to enhance their c knowledge.
-
-# Detail requirements
-## High Level Requirements:
-
-| ID | Description | Status (Implemented/Future)
-|:---:|:---:|:---:|
-|HLR-1| User shall be able to move to cover page and index page. |Implemented|
-|HLR-2| System output must display the contents of the file. |Implemented|
-|HLR-3| user shall be able to execute the sample codes. |Implemented|
-|HLR-4| user shall be able to give suggestion. |Implemented|
-|HLR-5| user shall be able to write their own code and execute. |Future|
-|HLR-6| user shall be able to access a learning leader board. |Future|
-
-
+## High Level Requirements: 
+| ID | Description | Category | Status | 
+| ----- | ----- | ------- | ---------|
+| H01 | The user will be able to define the matrix's size. |Technical| IMPLEMENTED |
+| H02 | The user should be able to combine the matrices. | Techincal | IMPLEMENTED | 
+| H03 | The user must be able to subtract matrices. | Techincal |  IMPLEMENTED  |
+| H04 | The user must be able to multiply matrices. | Techincal |  IMPLEMENTED  |
+| H05 | A user must be able to find a matrix's determinant, transpose, and inverse. | Techincal |  IMPLEMENTED  |
 ##  Low level Requirements:
-
-| ID | Description | Status (Implemented/Future)
-|:---:|:---:|:---:|
-|LLR-1| User shall be able to read the text files. |Implemented|
-|LLR-2| User shall be able to create their account. |Future|
-|LLR-3| User should be able to manage their data. |Future|
+ 
+| ID | Description | HLR ID | Status (Implemented/Future) |
+| ------ | --------- | ------ | ----- |
+| L01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | H01 |  IMPLEMENTED  |
+| L02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | H02 |  IMPLEMENTED |
+| L03 | Subtraction of two matrices is done in the same way that addition is done.| H03 | IMPLEMENTED |
+| L04 | Two square matrices of a specific size are used to multiply two matrices. | H04 |  IMPLEMENTED  |
+| L05 | The determinant of a single matrix of a specified size is implemented. | H05 |  IMPLEMENTED  |
+| L06 | The transpose of a single matrix operation is implemented | H05 |  IMPLEMENTED  |
+| L07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | H05 |  IMPLEMENTED  |
