@@ -27,9 +27,9 @@ This tool might be useful for a user who is working on a laptop or a desktop com
 
 ## SWOT ANALYSIS
 
-![SWOT-Sample](https://github.com/hemanthasapu/256889-miniproject-ltts/blob/main/1_Requirements/SWOT.png)
+![SWOT-Sample](https://github.com/snehal0203/M1_MatrixCalculator/blob/main/1_Requirements/SWOT.jpg)
 
-# 4W&#39;s and 1&#39;H
+# 4 W's and 1 H
 
 ## Who:
  * Students who need to answer issues with matrices as part of their academic work.
@@ -55,19 +55,19 @@ This tool might be useful for a user who is working on a laptop or a desktop com
 ## High Level Requirements: 
 | ID | Description | Category | Status | 
 | ----- | ----- | ------- | ---------|
-| HR01 | The user will be able to define the matrix's size. |Technical| IMPLEMENTED |
-| HR02 | The user should be able to combine the matrices. | Techincal | IMPLEMENTED | 
-| HR03 | The user must be able to subtract matrices. | Techincal |  IMPLEMENTED  |
-| HR04 | The user must be able to multiply matrices. | Techincal |  IMPLEMENTED  |
-| HR05 | A user must be able to find a matrix's determinant, transpose, and inverse. | Techincal |  IMPLEMENTED  |
+| H01 | The user will be able to define the matrix's size. |Technical| IMPLEMENTED |
+| H02 | The user should be able to combine the matrices. | Techincal | IMPLEMENTED | 
+| H03 | The user must be able to subtract matrices. | Techincal |  IMPLEMENTED  |
+| H04 | The user must be able to multiply matrices. | Techincal |  IMPLEMENTED  |
+| H05 | A user must be able to find a matrix's determinant, transpose, and inverse. | Techincal |  IMPLEMENTED  |
 ##  Low level Requirements:
  
 | ID | Description | HLR ID | Status (Implemented/Future) |
 | ------ | --------- | ------ | ----- |
-| LR01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | HR01 |  IMPLEMENTED  |
-| LR02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | HR02 |  IMPLEMENTED |
-| LR03 | Subtraction of two matrices is done in the same way that addition is done.| HR03 | IMPLEMENTED |
-| LR04 | Two square matrices of a specific size are used to multiply two matrices. | HR04 |  IMPLEMENTED  |
-| LR05 | The determinant of a single matrix of a specified size is implemented. | HR05 |  IMPLEMENTED  |
-| LR06 | The transpose of a single matrix operation is implemented | HR05 |  IMPLEMENTED  |
-| LR07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | HR05 |  IMPLEMENTED  |
+| L01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | H01 |  IMPLEMENTED  |
+| L02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | H02 |  IMPLEMENTED |
+| L03 | Subtraction of two matrices is done in the same way that addition is done.| H03 | IMPLEMENTED |
+| L04 | Two square matrices of a specific size are used to multiply two matrices. | H04 |  IMPLEMENTED  |
+| L05 | The determinant of a single matrix of a specified size is implemented. | H05 |  IMPLEMENTED  |
+| L06 | The transpose of a single matrix operation is implemented | H05 |  IMPLEMENTED  |
+| L07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | H05 |  IMPLEMENTED  |
