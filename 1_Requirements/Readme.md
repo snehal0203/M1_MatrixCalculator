@@ -64,10 +64,10 @@ This tool might be useful for a user who is working on a laptop or a desktop com
  
 | ID | Description | HLR ID | Status (Implemented/Future) |
 | ------ | --------- | ------ | ----- |
-| L01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | HR01 |  IMPLEMENTED  |
-| L02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | HR02 |  IMPLEMENTED |
-| L03 | Subtraction of two matrices is done in the same way that addition is done.| HR03 | IMPLEMENTED |
-| L04 | Two square matrices of a specific size are used to multiply two matrices. | HR04 |  IMPLEMENTED  |
-| L05 | The determinant of a single matrix of a specified size is implemented. | HR05 |  IMPLEMENTED  |
-| L06 | The transpose of a single matrix operation is implemented | HR05 |  IMPLEMENTED  |
-| L07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | HR05 |  IMPLEMENTED  |
+| L01 | The matrix's size must be specified by the user. The dimensions of the square matrix are defined as the size. | H01 |  IMPLEMENTED  |
+| L02 | It is possible to combine two matrices. Both matrices must have the same size. For both matrices, the size entered at the start is the same. | H02 |  IMPLEMENTED |
+| L03 | Subtraction of two matrices is done in the same way that addition is done.| H03 | IMPLEMENTED |
+| L04 | Two square matrices of a specific size are used to multiply two matrices. | H04 |  IMPLEMENTED  |
+| L05 | The determinant of a single matrix of a specified size is implemented. | H05 |  IMPLEMENTED  |
+| L06 | The transpose of a single matrix operation is implemented | H05 |  IMPLEMENTED  |
+| L07 | The determinant function and the transpose functions are both used to discover the inverse of a matrix. Checking if the determinant of a matrix is equal to 0 is a criterion that a matrix is invertible. | H05 |  IMPLEMENTED  |
